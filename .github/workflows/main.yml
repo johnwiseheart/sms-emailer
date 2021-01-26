@@ -12,8 +12,8 @@ jobs:
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v1
         with:
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
-          repository: johnwiseheart/sms-emailer/sms-emailer
+          username: johnwiseheart
+          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+          registry: hub.docker.com
+          repository: johnwiseheart/sms-emailer
           tag_with_ref: true
